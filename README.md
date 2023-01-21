@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Mir_Houzing(git remote add origin https://github.com/ZiyoWorld/mir_houzing.git).
+
+# can see the DEMO [houzing](https://app.netlify.com/teams/mirziyod/sites)
 
 ## Available Scripts
 
