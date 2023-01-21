@@ -2,7 +2,7 @@ import React from 'react'
 import {
   Container,
   Wrapper, Section, Logo,
-  Link
+  Link, Main
 } from './style';
 import { navbar } from '../../utils/navbar';
 import { Outlet, useNavigate } from 'react-router-dom';
@@ -11,6 +11,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <Container>
+      <Main>
+
+      
       <Wrapper>
         <Section onClick={()=> navigate("/home")}  logo>
           <Logo /> <h3>Houzing</h3>
@@ -34,7 +37,8 @@ const Navbar = () => {
             Sign In
           </button>
         </Section>
-      </Wrapper>
+       </Wrapper>
+      </Main>
       <Outlet />
     </Container>
   )
