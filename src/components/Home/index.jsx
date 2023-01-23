@@ -1,4 +1,6 @@
 import React from 'react'
+// import  Input  from '../Generic/Input';
+// import  Button  from '../Generic/Button';
 import { Input, Button } from '../Generic';
 import { Container } from './style';
 
