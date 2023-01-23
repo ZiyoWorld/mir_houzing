@@ -1,10 +1,20 @@
 import React from 'react'
+import { Input, Button } from '../Generic';
 import { Container } from './style';
 
 const Home = () => {
   return (
     <Container>
-     Home
+      <h1>Home</h1>
+      <Input
+        placeholder={"Mirziyod"}
+        type={"light"}
+        width={100}
+        height={40}
+      />
+      <Button>
+        Test
+      </Button>
     </Container>
   )
 }
