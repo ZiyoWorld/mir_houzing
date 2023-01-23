@@ -5,12 +5,14 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+
 `;
 const Main = styled.div`
     display: flex;
     justify-content: center;
     background-color: var(--colorPrimary);
 `;
+
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
@@ -42,14 +44,14 @@ const Link = styled(NavLink)`
   text-decoration: none;
   padding: 0 32px;
   color: #fff;
- 
-  
-  
-`
+`;
+
 
 
 export {
     Container, Wrapper,
     Section, Logo, Link,
     Main
+
+   
 }
