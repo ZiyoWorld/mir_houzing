@@ -17,4 +17,38 @@ body{
   --backgroundPrimary: #0061df;
   /*padding*/
   --padding: 0 130px;
+  
+}
+.title{
+  /* Paragraph/Medium/Semibold */
+ 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  /* identical to box height, or 129% */
+  
+  text-align: center;
+  letter-spacing: -0.02em;
+ 
+ 
+ /* Color / 2 */
+ 
+   color: #0D263B;
+ }
+.subtitle{
+ /* Paragraph/Medium/Semibold */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+
+/* Color / 2 */
+
+color: #0D263B;
 }

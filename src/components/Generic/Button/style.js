@@ -18,7 +18,7 @@ const getType = ({type})=>{
         };
         case 'light': return{
             background: "#F6F8F9;",
-            border: '1px solid #0D263B',
+            border: '1px solid #E6E9EC',
             color: "#000"
         }
         default : return {
