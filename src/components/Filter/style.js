@@ -6,10 +6,14 @@ import {ReactComponent as search } from '../../assets/icons/search.svg';
 
 const Container = styled.div`
   display: flex;
+  margin: 0 auto;
   padding: var(--padding);
   padding-top: 10px;
   padding-bottom: 10px;
   gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
 `;
 const Icons = styled.div``;
 Icons.Search = styled(search)`

@@ -17,7 +17,6 @@ const Navbar = () => {
   return (
     <Container>
       <Main >
-
       <Wrapper>
         <Section onClick={()=> navigate("/home")}  logo>
           <Logo /> <h3>Houzing</h3>
