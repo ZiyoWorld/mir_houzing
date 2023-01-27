@@ -1,10 +1,14 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 import { Input, Button } from '../Generic';
 import { Container, Icons, MenuWrapper, Section } from './style';
 import { Dropdown, Space } from 'antd';
 
 const Filter = () => {
-
+  const [open, setOpen] = useState(false);
+  const onOpenChange = () => {
+    setOpen(!open);
+  }
+ 
   const countryRef = useRef();
   const regionRef = useRef();
   const cityRef = useRef();
@@ -19,7 +23,7 @@ const Filter = () => {
 
   const items = [
     {
-      key: '1',
+      key:  1,
       label: (
         <MenuWrapper>
             <h1 className='subtitle'>Address</h1>
@@ -50,7 +54,7 @@ const Filter = () => {
   return (
     <Container>
       <Input icon={<Icons.Houses />} placeholder={'Enter an address, neighborhood, city, or ZIP code'} />
-      <Dropdown menu={{items}}
+      <Dropdown menu={{items}} open={open}  onOpenChange={onOpenChange}
         placement="bottomRight"
         arrow={{ pointAtCenter: true }}
        >
