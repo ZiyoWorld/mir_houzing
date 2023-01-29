@@ -8,17 +8,18 @@ import { ReactComponent as resize } from '../../assets/icons/resize.svg';
 
 const Container = styled.div`
    width: 380px;
-   height: 430px;
+   min-height: 430px;
    filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06)) 
    drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06)) 
    drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
-   border: 1px solid red;
-   margin: 100px;
+   display: flex;
+   flex-direction: column;
 `;
 const Img = styled.img`
    width: 100%;
    max-height: 220px;
-   margin-bottom: 24px;
+   min-height: 220px;
+
 `;
 
 const Content = styled.div`
@@ -27,7 +28,8 @@ const Content = styled.div`
    justify-content: ${({ footer }) => footer && 'space-between'};
    background: #fff;
    padding: 16px 20px;
-   padding-top: ${({footer})=> footer ? '8px' : '24px'};
+   padding-top: ${({ footer }) => footer ? '8px' : '24px'};
+   
 `;
 const Details = styled.div`
    display: flex;

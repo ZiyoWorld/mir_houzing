@@ -66,3 +66,15 @@ line-height: 20px;
 /* Text / Color */
 color: #696969;
 }
+.inline{
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.text-hidden{
+  display:flex;
+  align-items: center;
+}
+.text-hid{
+  margin-left: 2px;
+}
