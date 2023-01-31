@@ -11,7 +11,6 @@ const Filter = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const query = useSearch();
-  console.log(query.get('region', 'params'));
   const onOpenChange = () => {
     setOpen(!open);
   };
@@ -32,7 +31,7 @@ const Filter = () => {
   const minPriceRef = useRef();
   const maxPriceRef = useRef();
 
-  console.log(location);
+
 
   const onChange = ({ target: { name, value} }) => {
     // console.log(name, value, placeholder);
@@ -58,7 +57,7 @@ const Filter = () => {
               placeholder={'Region'} />
             <Input 
             onChange={onChange}
-             name="city" 
+             name="address" 
               ref={cityRef}
               defaultValue={query.get('city')}
               placeholder={'City'} />
@@ -88,10 +87,6 @@ const Filter = () => {
     },
   ];
 
-  
-
-
-  console.log(uzeReplace("address", "Tashkent"));
 
   return (
     <Container>

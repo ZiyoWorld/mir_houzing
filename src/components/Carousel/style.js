@@ -25,7 +25,7 @@ const Arrow = styled(arrow)`
 
 const Img = styled.img`
   width: 100%;
-  height: 500px;
+  height: 400px;
 `;
 
 const Blur = styled.div`
@@ -34,8 +34,8 @@ const Blur = styled.div`
   bottom: 0px;
   right: 0;
   left: 0;
-  height: 500px;
   background: rgba(0, 0, 0, 0.4);
+  height: 400px;
 `;
 
 const Content = styled.div`

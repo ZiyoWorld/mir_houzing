@@ -1,9 +1,8 @@
-import React, {useRef} from 'react'
+import React  from 'react'
 import {  Container, Details, Content, Img, Icons,Divider  } from './style';
 import noimg from '../../assets/img/noimg.png';
 
 const HouseCard = ({data = {}}) => {
-    console.log(data);
     const {  city,
         country, description,
         address, houseDetails,

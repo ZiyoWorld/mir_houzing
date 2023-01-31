@@ -8,9 +8,10 @@ import { ReactComponent as resize } from '../../assets/icons/resize.svg';
 
 const Container = styled.div`
    width: 100%;
-   max-width: 380px;
-   min-width: 330px;
-   height: 430px;
+   max-width: 280px;
+   min-width: 230px;
+   max-height: 350px;
+   min-height: 220px;
    filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06)) 
    drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06)) 
    drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
@@ -33,50 +34,15 @@ const Content = styled.div`
    padding-top: ${({ footer }) => footer ? '8px' : '24px'};
    
 `;
-const Details = styled.div`
-   display: flex;
-   justify-content: space-between;
-   padding-top: 16px;
-`;
-Details.Item = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-direction: ${({ row }) => (row ? 'row' : 'column')};
-  align-items: ${({ footer }) => !footer && 'center'};
-`;
-
-const Icons = styled.div`
-`;
-Icons.Bed = styled(bed)``;
-Icons.Bath = styled(bath)``;
-Icons.Garage = styled(garag)``;
-Icons.Ruler = styled(ruler)``;
-Icons.Love = styled(love)`
- width: 35px;
- height: 27px;
- padding: 6px;
- background-color: #f6f8f9;
- border-radius: 50%;
- margin-left: 20px;
- cursor: pointer;
- &:active{
-   transform: scale(0.9);
-   color: red;
- }
-`;
-Icons.Resize = styled(resize)`
-   cursor: pointer;
-`;
 
 
-const Divider = styled.div`
-   background:  #e6e9ec;
-   height: 1px;
-   width: 100%;
-`;
- 
+
+
+
+
+
 
 
 export {
-    Container, Img, Divider, Content, Details, Icons
+    Container, Img, Content
 }

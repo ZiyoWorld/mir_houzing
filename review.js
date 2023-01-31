@@ -30,4 +30,11 @@
 // ➤ new URLsearchParams()
 // ➤ Filter Globally
 
+// 5-dars
+// ➤ BUG FIX
+// ➤ 1440px
+// ➤ lazy load
+// ➤ place to center
+// ➤ Change flex to grid
+
  
