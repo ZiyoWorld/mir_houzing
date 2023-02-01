@@ -4,6 +4,8 @@ import {ReactComponent as houses } from '../../assets/icons/houses.svg';
 import {ReactComponent as filter } from '../../assets/icons/filter.svg';
 import {ReactComponent as search } from '../../assets/icons/search.svg';
 
+import { Select } from 'antd';
+
 const Container = styled.div`
   display: flex;
   padding: var(--padding);
@@ -27,6 +29,21 @@ Icons.Houses = styled(houses)`
   margin-right: 8px;
 `;
 
+const SelectAnt = styled(Select)`
+  min-width: 200px;
+  width: 100%;
+  max-width: 200px;
+  .ant-select-selector {
+    height: 44px !important;
+  }
+  .ant-select-selection-item {
+    display: flex !important;
+    align-items: center !important;
+  }
+`;
+
+
+
 const MenuWrapper = styled.div`
   padding: 30px;
   background: white;
@@ -39,4 +56,4 @@ const Section = styled.div`
   margin-bottom: 20px;
 `;
 
-export { Container, Icons, MenuWrapper, Section };
+export { Container,Icons,SelectAnt, MenuWrapper, Section };

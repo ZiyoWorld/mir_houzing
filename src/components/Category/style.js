@@ -3,7 +3,13 @@ import { ReactComponent as arrow } from '../../assets/icons/arrow.svg';
 
 const Container = styled.div`
   position: relative;
-  height: fit-content;
+  padding: 96px 130px;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
+  
 `;
 
 const Arrow = styled(arrow)`
@@ -25,7 +31,6 @@ const Arrow = styled(arrow)`
 
 const Img = styled.img`
   width: 100%;
-  height: 500px;
 `;
 
 const Blur = styled.div`
@@ -35,7 +40,7 @@ const Blur = styled.div`
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.4);
-  height: 500px;
+  height: 400px;
 `;
 
 const Content = styled.div`
