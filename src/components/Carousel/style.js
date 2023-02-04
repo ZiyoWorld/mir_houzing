@@ -25,7 +25,7 @@ const Arrow = styled(arrow)`
 
 const Img = styled.img`
   width: 100%;
-  height: 500px;
+  height: 450px;
 `;
 
 const Blur = styled.div`
@@ -35,7 +35,7 @@ const Blur = styled.div`
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.4);
-  height: 500px;
+  height: 450px;
 `;
 
 const Content = styled.div`
@@ -84,4 +84,7 @@ Content.Price = styled.div`
   letter-spacing: -0.02em;
   color: #ffffff;
 `;
+
+
+
 export { Container, Arrow, Img, Blur, Content };

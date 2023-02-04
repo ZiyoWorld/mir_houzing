@@ -35,7 +35,9 @@ const Container = styled("button")`
 display: flex;
 justify-content: center;
 align-items: center;
+
 font-size: ${({fontSize})=> (fontSize ? `${fontSize}}px`: `14px`) };
+margin-left: ${({marginLeft})=> (marginLeft ? `${marginLeft}}px`: `0px`) };
 height: ${({height})=> (height ? `${height}px`: `42px`) };
 border-radius: 2px;
 width: ${({width})=> (width ? `${width}px` : `120px`)};
