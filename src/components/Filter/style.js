@@ -15,6 +15,7 @@ const Container = styled.div`
   width: 100%;
   max-width: 1440px;  
   margin: auto;
+
 `;
 
 const Icons = styled.div``;

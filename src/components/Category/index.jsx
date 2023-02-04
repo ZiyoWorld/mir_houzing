@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import { Container} from './style';
+import { Container, Content} from './style';
 
 // import { Carousel } from 'antd';
 import Slider from 'react-slick';
@@ -39,10 +39,16 @@ export const GenCarousel = () => {
 
     return (
       <Container>
+        <Content>
+        <h1 className="title">Why</h1>
+        <div className="info centers">
+          Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
+        </div>
+       </Content>
          <Slider {...settings}>
           {
             data.map((value) => {
-              return <CategoryCard onClick={()=> navigation(`/properties?category_id=${value?.id}`)} data={value} />;
+              return <CategoryCard key={value.id} onClick={()=> navigation(`/properties?category_id=${value?.id}`)} data={value} />;
             })
           }
         </Slider>

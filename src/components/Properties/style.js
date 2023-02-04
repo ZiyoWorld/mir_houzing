@@ -8,7 +8,6 @@ const Container = styled.div`
     /* justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px; */
-
     padding: var(--padding);
     max-width: 1440px;
     margin: 0 auto;
