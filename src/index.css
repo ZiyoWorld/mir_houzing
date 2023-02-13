@@ -86,3 +86,21 @@ color: #696969;
 .centers{
   text-align: center;
 }
+
+.scrolses{
+  margin: 40px 0;
+  background: #080800;
+  border-radius: 7px;
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15)
+  0 15px 90px 30px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  color: #1870ed;
+  overflow-y: auto;
+}
+.scrolses::-webkit-scrollbar{
+  width: 4px;
+}
+.scrolses::-webkit-scrollbar-thumb{
+  background-color: yellow;
+  border-radius: 8px;
+}

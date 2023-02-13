@@ -37,4 +37,7 @@
 // ➤ place to center
 // ➤ Change flex to grid
 
+ // self -study 
+ // house item oxirigacha
+ // home da 1 sections
  

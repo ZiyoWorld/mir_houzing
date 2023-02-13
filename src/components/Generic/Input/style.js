@@ -40,6 +40,9 @@ width: ${({width})=> (width ? `${width}px` : `100%`)};
 ${getType};
 outline: none;
 border: 1px solid #e6e9ec;
+&:focus{
+    border: 1px solid #0061DF;
+}
 cursor: pointer;
 padding-left: ${({icon})=> icon ? "35px" : "20px"};
 &:active{

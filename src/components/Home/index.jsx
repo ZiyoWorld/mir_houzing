@@ -11,6 +11,7 @@ import Banner  from '../Banner';
 import Recent  from '../Recent';
 
 import { Container } from './style';
+import Testimonials from '../Testimonials';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Category />
       <Banner />
       <Recent />
+      <Testimonials />
     </Container>
   )
 }

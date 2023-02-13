@@ -1,5 +1,8 @@
 import React from 'react';
 import useId from "../hooks";
+
+import SigninPage from '../pages/Signin';
+
 const HomePage = React.lazy(() => import("../pages/Home"));
 const Properties = React.lazy(() => import("../pages/Properties"));
 const HouseItem = React.lazy(() => import("../pages/HouseItem"));
@@ -33,10 +36,20 @@ export const navbar = [
         private: false,
         hidden: false
     },
-    { id: useId, 
-        element: <h1>Sigh in</h1>, 
+    {
+        id: useId, 
+        element: <SigninPage />, 
         title: "Sign In",
         path: '/signin', 
         private: false, 
-        hidden: true },
+        hidden: true
+    },
+    {
+        id: useId, 
+        element: <h1>Generec Sign Up</h1>, 
+        title: "Sign up",
+        path: '/signin', 
+        private: false, 
+        hidden: true
+    },
 ];

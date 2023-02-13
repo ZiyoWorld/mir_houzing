@@ -29,6 +29,12 @@ const getType = ({type})=>{
     }
 }
 
+const getWidth = ({width}) => {
+    if (!width) return '130px';
+    else if (`${width}`.includes('%')) return '100%';
+    else return `${width}px`;
+}
+
 
 
 const Container = styled("button")`
@@ -38,9 +44,9 @@ align-items: center;
 
 font-size: ${({fontSize})=> (fontSize ? `${fontSize}}px`: `14px`) };
 margin-left: ${({marginLeft})=> (marginLeft ? `${marginLeft}}px`: `0px`) };
-height: ${({height})=> (height ? `${height}px`: `42px`) };
+height: ${({height})=> (height ? `${height}px`: `44px`) };
 border-radius: 2px;
-width: ${({width})=> (width ? `${width}px` : `120px`)};
+width: ${getWidth};
 ${getType};
 cursor: pointer;
 &:active{

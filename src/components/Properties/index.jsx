@@ -15,25 +15,33 @@ const Properties = () => {
   const { search } = useLocation();
 
   useEffect(() => {
-    // fetch(`${url}/houses/list${search}`)
-    //   .then((res) => res.json())
-    //   .then((res) => {
-    //     setData(res?.data || []);
-    //   })
-    request({ url: `/houses/list${search}` })
-  }, []);
+    request({ url: `/houses/list${search}` }).then((res) =>
+      setData(res?.data || [])
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [search]);
 
   const onSelect = (id) => {
     navigate(`/properties/${id}`)
   }
   return (
+    <React.Fragment>
+      <div className='title'>Properties</div>
+      <div className='subTitle' style={{ textAlign: 'center', marginTop: "8px", }}>
+      Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
+      </div>
       <Container>
       {
         data.map((value) => {
-          return <HouseCard onClick={()=>onSelect(value.id)} key={value.id} data={value} />
+          return <HouseCard
+            onClick={() => onSelect(value.id)}
+            key={value.id}
+            data={value}
+          />
         })
       }
     </Container>
+      </React.Fragment>
   )
 }
 

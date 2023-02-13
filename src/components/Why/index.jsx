@@ -6,7 +6,7 @@ export const Why = () => {
   
   return (
     <Container >
-      <Content width>
+      <Content width={"true"}>
         <h1 className="title">Category</h1>
         <div className="info centers">
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.

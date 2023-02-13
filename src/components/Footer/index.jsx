@@ -1,15 +1,16 @@
 import React from 'react'
 
-import { Container,Section, Logo, Content, Wrapper, Line, Icons} from './style';
+import { Container,Section, Logo,Body, Content, Wrapper, Line, Icons} from './style';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../Generic';
-import { getValue } from '@testing-library/user-event/dist/utils';
+// import { getValue } from '@testing-library/user-event/dist/utils';
 
 export const Why = () => {
   const navigates = useNavigate();
   
   return (
     <Container>
+      <Body>
       <Wrapper>
         <Content contact>
             <Content.Title contitle>Contact Us</Content.Title>
@@ -61,7 +62,7 @@ export const Why = () => {
          <Button width={`45`} marginLeft={20}>^</Button>
         </Content.Item>
       </Wrapper>
-      
+      </Body>
     </Container>
   );
 };

@@ -9,15 +9,20 @@ import { ReactComponent as t } from '../../assets/icons/t.svg';
 import { ReactComponent as l } from '../../assets/icons/l.svg';
 import {ReactComponent as logo} from '../../assets/icons/logo.svg';
 const Container = styled.div`
+  width: 100%;
+  background-color: #0D263B;
+  margin-top: 96px;
+`;
+
+const Body = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  margin-top: 48px;
-  background-color: #0D263B;
   height: 417px;
   max-width: 1440px;
 `;
+
 const Wrapper = styled.div`
     display:flex;
     justify-content: ${({center})=> center ? "space-between": "flex-around"}; 
@@ -124,4 +129,4 @@ const Logo = styled(logo)`
 `;
 
 
-export { Container,Wrapper, Section, Logo, Line, Content, Icons };
+export { Container,Wrapper, Section,Body, Logo, Line, Content, Icons };
