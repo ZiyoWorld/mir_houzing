@@ -1,9 +1,11 @@
-import React  from 'react'
+import React, { useContext }  from 'react'
 import {  Container, Details, Content, Img, Icons,Divider  } from './style';
 import noimg from '../../assets/img/noimg.png';
+import { message } from 'antd';
+import { PropertiesContext } from '../../context/properteis';
 
 export const HouseCard = ({ data = {}, gap, onClick }) => {
-   
+  const [state] = useContext(PropertiesContext);
     const {
       attachments,
       salePrice,
@@ -14,11 +16,31 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
       country,
       description,
       category,
+      favorite,
+      id
     } = data;
   
+  const save = (event) => {
+    event.stopPropagation();
+    console.log("test", id);
+    fetch(
+      `https://houzing-app.herokuapp.com/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`, {
+        method: "PUT",
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+    }
+    ).then((res) => res.json())
+      .then((res) => {
+        if (favorite) res?.success && message.warning("Successfully disliked");
+        else res?.success && message.info("Successfully liked");
+        state.refetch && state.refetch();
+      });
+  };
+
     
     return (
-      <div style={{ display: "flex" }} onClick={onClick}>
+      <div style={{ display: "flex" }} onClick={onClick} >
         <Container gap={gap}>
           <Img src={(attachments && attachments[0]?.imgPath) || noimg} />
           <Content>
@@ -54,6 +76,10 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
               <div className="info">${salePrice || 0}/mo</div>
               <div className="subTitle">${price || 0}/mo</div>
             </Details.Item>
+            <Details row>
+              <Icons.Resize />
+              <Icons.Love onClick={save}  favorite={favorite} />
+            </Details>
           </Content>
         </Container>
       </div>

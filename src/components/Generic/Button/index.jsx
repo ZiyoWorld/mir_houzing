@@ -1,8 +1,10 @@
 import React from 'react'
 import { Container } from './style'
-const Button = ({children,height, type,marginLeft, width, onClick}) => {
+const Button = ({children,height,disabled, type,marginLeft, width, onClick}) => {
   return (
-    <Container onClick={onClick}
+    <Container
+      onClick={onClick}
+      disabled={disabled}
       type={type}
       width={width}
       height={height}

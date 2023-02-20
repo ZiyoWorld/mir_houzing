@@ -23,7 +23,7 @@ export const useRequest = () => {
         me ? "https://houzing-app.herokuapp.com/api" : REACT_APP_BASE_URL
       }${url}`,
       options
-    ).then((res) => res.json());
+    ).then((res) => res.json())
   };
 
   return request;

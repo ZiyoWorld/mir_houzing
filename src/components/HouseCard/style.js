@@ -71,7 +71,7 @@ Icons.Love = styled(love)`
     fill: ${({ favorite }) => favorite && "white"};
   }
   :active {
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
 `;
 

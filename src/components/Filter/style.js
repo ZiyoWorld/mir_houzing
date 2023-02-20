@@ -45,16 +45,18 @@ const SelectAnt = styled(Select)`
 
 
 
-const MenuWrapper = styled.div`
-  padding: 30px;
-  background: white;
-  border: 1px solid #e6e9ec;
-`;
-const Section = styled.div`
-  display: flex;
-  justify-content: start;
-  gap: 20px;
-  margin-bottom: 20px;
-`;
+  const MenuWrapper = styled.div`
+    padding: 30px;
+    background: white;
+    border: 1px solid #e6e9ec;
+  `;
+  const Section = styled.div`
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    margin-bottom: 20px;
+  `;
+
+  
 
 export { Container,Icons,SelectAnt, MenuWrapper, Section };

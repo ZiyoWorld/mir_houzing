@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { Container } from './style';
 import HouseCard from '../HouseCard'; 
 import { useLocation, useNavigate } from 'react-router-dom';
-import useRequest from '../../hooks/useReqest';
-const { REACT_APP_BASE_URL: url } = process.env;
+import useRequest from '../../hooks/useRequest';
+// const { REACT_APP_BASE_URL: url } = process.env;
 
 
 const Properties = () => {

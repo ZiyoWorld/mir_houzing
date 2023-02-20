@@ -7,7 +7,7 @@ export const Why = () => {
   return (
     <Container >
       <Content width={"true"}>
-        <h1 className="title">Category</h1>
+        <h1 className="title">Why Choose Us</h1>
         <div className="info centers">
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </div>

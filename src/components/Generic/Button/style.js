@@ -7,7 +7,7 @@ import styled from "styled-components";
 const getType = ({type})=>{
     switch(type){
         case 'dark' : return {
-            background: "transparent",
+            background: 'rgb(13,38,59)',
             border: '1px solid #fff',
             color: "#fff"
         };
@@ -45,13 +45,15 @@ align-items: center;
 font-size: ${({fontSize})=> (fontSize ? `${fontSize}}px`: `14px`) };
 margin-left: ${({marginLeft})=> (marginLeft ? `${marginLeft}}px`: `0px`) };
 height: ${({height})=> (height ? `${height}px`: `44px`) };
-border-radius: 2px;
+border-radius: 3px;
 width: ${getWidth};
+opacity: ${({disabled})=> (disabled ? 0.7 : 1)};
+cursor: ${({disabled})=> (disabled ? "not-allowed" : "pointer")};
 ${getType};
-cursor: pointer;
 &:active{
     opacity: 0.7;
 }
 `;
+
 
 export { Container, };

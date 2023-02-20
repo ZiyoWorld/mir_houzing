@@ -40,7 +40,7 @@ export const GenCarousel = () => {
     return (
       <Container>
         <Content>
-        <h1 className="title">Why</h1>
+        <h1 className="title">Category</h1>
         <div className="info centers">
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </div>

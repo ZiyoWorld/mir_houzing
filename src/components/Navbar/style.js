@@ -47,11 +47,28 @@ const Link = styled(NavLink)`
 `;
 
 
+const Item = styled.div`
+   font-family: 'Montserrat';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+   /* identical to box height, or 143% */
+   color: #000000;
+   &:hover{
+    background-color: #f2f2f2;
+   };
+   width: 100%;
+   padding: 0 15px;
+`;
+
+
+
 
 export {
     Container, Wrapper,
     Section, Logo, Link,
-    Main
+    Main,Item
 
    
 }

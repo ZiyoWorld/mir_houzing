@@ -1,7 +1,10 @@
 import React from 'react';
 import useId from "../hooks";
 
-import SigninPage from '../pages/Signin';
+import Favorite from '../pages/Favorite';
+import Signin from '../pages/Register';
+import MyProfile from '../pages/MyProfile';
+import AddNewHousePage from '../pages/AddNewHouse';
 
 const HomePage = React.lazy(() => import("../pages/Home"));
 const Properties = React.lazy(() => import("../pages/Properties"));
@@ -11,8 +14,8 @@ export const navbar = [
     {
         id: useId,
         element: <React.Suspense fallback={<React.Fragment>Loading...</React.Fragment>}>,
-        <HomePage />
-    </React.Suspense>,
+            <HomePage />
+        </React.Suspense>,
         title: "Home",
         path: '/home',
         private: false, hidden: false
@@ -38,18 +41,50 @@ export const navbar = [
     },
     {
         id: useId, 
-        element: <SigninPage />, 
-        title: "Sign In",
-        path: '/signin', 
-        private: false, 
+        element: <Favorite />, 
+        title: "Favorite",
+        path: '/favorite', 
+        private: true, 
         hidden: true
     },
     {
         id: useId, 
-        element: <h1>Generec Sign Up</h1>, 
-        title: "Sign up",
-        path: '/signin', 
-        private: false, 
+        element: <MyProfile />, 
+        title: "My Profile",
+        path: '/my-profile', 
+        private: true, 
         hidden: true
     },
+    {
+        id: useId,
+        element: <Signin />,
+        title: "Sign In",
+        path: "/signin",
+        private: false,
+        hidden: true,
+    },
+    {
+        id: useId,
+        element: <AddNewHousePage />,
+        title: "Add New House",
+        path: "/my-profile/new-house",
+        private: true,
+        hidden: true,
+    },
+    {
+        id: useId,
+        element: <AddNewHousePage />,
+        title: "Add New House",
+        path: "/my-profile/edit-house/:id",
+        private: true,
+        hidden: true,
+    },
+    {
+        id: useId,
+        element: <Signin />,
+        title: "Sign Up",
+        path: "/signup",
+        private: false,
+        hidden: true,
+      },
 ];

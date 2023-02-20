@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Content } from "./style";
 import { useNavigate } from "react-router-dom";
 import { Button, Input } from "../Generic";
-import  useRequest  from "../../hooks/useRequest";
+import useRequest from "../../hooks/useRequest";
 import { message } from "antd";
 
-export const Signin = () => {
+export const Signup = () => {
   const request = useRequest();
   const [body, setBody] = useState({});
   const navigate = useNavigate();
@@ -21,34 +21,30 @@ export const Signin = () => {
   };
 
   const onSubmit = async () => {
-    console.log(body);
     request({
-      url: `/public/auth/login`,
+      url: `/public/auth/register`,
       method: "POST",
       body,
       me: true,
-    })
-      .then((res) => {
-        console.log(res);
-      if (res?.authenticationToken) {
-        navigate("/home");
-        localStorage.setItem("token", res?.authenticationToken);
-      }
+    }).then((res) => {
+      console.log(res);
       info();
+      navigate("/signin");
     });
   };
-  
 
   return (
     <Content>
-        <div className="subTitle">Sing in</div>
-        <Input onChange={onChange} placeholder="email" type="email" />
-        <Input onChange={onChange} placeholder="password" type="password" />
-        <Button width="%" onClick={onSubmit} >
-          Login
-        </Button>
-      </Content>
+      <div className="subTitle">Sing Up</div>
+      <Input onChange={onChange} placeholder="email" type="email" />
+      <Input onChange={onChange} placeholder="firstname" type="text" />
+      <Input onChange={onChange} placeholder="lastname" type="text" />
+      <Input onChange={onChange} placeholder="password" type="password" />
+      <Button width="%" onClick={onSubmit}>
+        Login
+      </Button>
+    </Content>
   );
 };
 
-export default Signin;
+export default Signup;

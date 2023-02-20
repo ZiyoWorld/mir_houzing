@@ -4,9 +4,13 @@ import { useParams } from 'react-router-dom';
 import { Input } from '../Generic';
 import { Yandex }  from '../Generic/Yandex';
 import  Recent   from '../Recent';
-import { Container, Content,Description,Details,Icons, Section, Title, Wrapper, User, Line } from './style';
+import {
+  Container, Content, Description, Details, Icons,
+  Section, Title, Wrapper, User, Line, ImageContainer,
+  ImgContainer, Blur
+} from './style';
 import nouser from '../../assets/img/nouser.png';
-
+import noimg from '../../assets/img/noimg.png';
 
 
 const Filter = () => {
@@ -31,10 +35,32 @@ const Filter = () => {
 
   return (
     <React.Fragment>
-
-   
+      <ImageContainer>
+        <ImageContainer.Main src={(data?.attachments && data?.attachments[0].imgPath) || noimg} alt="Test" />
+       <ImgContainer>
+          {data?.attachments &&
+            data?.attachments?.slice(1, 5).map((value, index) => {
+              return data?.attachments?.length > 5 && index === 3 ? (
+                <Blur.Container>
+                  <ImageContainer.Subimg
+                    key={value.id}
+                    src={value?.imgPath}
+                    alt="test"
+                  />
+                  <Blur>+{data?.attachments?.length - 5}</Blur>
+                </Blur.Container>
+              ) : (
+                <ImageContainer.Subimg
+                  key={value.id}
+                  src={value?.imgPath}
+                  alt="test"
+                />
+              );
+            })}
+        </ImgContainer>
+         </ImageContainer>
     <Wrapper>
-    <Container flex={3}>
+        <Container flex={3}>
       <Content>
         <Section >
           <Section.Title large>
