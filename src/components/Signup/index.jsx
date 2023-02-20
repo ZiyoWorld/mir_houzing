@@ -29,7 +29,7 @@ export const Signup = () => {
     }).then((res) => {
       console.log(res);
       info();
-      navigate("/signin");
+      navigate("/home");
     });
   };
 
