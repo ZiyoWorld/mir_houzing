@@ -40,7 +40,7 @@ export const Signup = () => {
       <Input onChange={onChange} placeholder="lastname" type="text" />
       <Input onChange={onChange} placeholder="password" type="password" />
       <Button width="%" onClick={onSubmit}>
-        Login
+        Register
       </Button>
     </Content>
   );

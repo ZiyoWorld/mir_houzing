@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Mir_Houzing(git remote add origin https://github.com/ZiyoWorld/mir_houzing.git).
 
-# can see the DEMO [houzing](https://app.netlify.com/teams/mirziyod/sites)
+# can see the DEMO [houzing](https://mir-houzing.netlify.app/home)
 
 ## Available Scripts
 
