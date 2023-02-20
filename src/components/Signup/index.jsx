@@ -27,9 +27,8 @@ export const Signup = () => {
       body,
       me: true,
     }).then((res) => {
-      console.log(res);
       info();
-      navigate("/home");
+      navigate("/signin");
     });
   };
 

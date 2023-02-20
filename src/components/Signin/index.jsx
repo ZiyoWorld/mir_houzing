@@ -29,7 +29,6 @@ export const Signin = () => {
       me: true,
     })
       .then((res) => {
-        console.log(res);
       if (res?.authenticationToken) {
         navigate("/home");
         localStorage.setItem("token", res?.authenticationToken);
