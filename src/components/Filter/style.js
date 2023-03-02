@@ -1,21 +1,30 @@
 import styled from "styled-components";
 // Filter
-import {ReactComponent as houses } from '../../assets/icons/houses.svg';
-import {ReactComponent as filter } from '../../assets/icons/filter.svg';
-import {ReactComponent as search } from '../../assets/icons/search.svg';
+import { ReactComponent as houses } from "../../assets/icons/houses.svg";
+import { ReactComponent as filter } from "../../assets/icons/filter.svg";
+import { ReactComponent as search } from "../../assets/icons/search.svg";
 
-import { Select } from 'antd';
+import { Select } from "antd";
 
 const Container = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: var(--padding);
   padding-top: 10px;
   padding-bottom: 10px;
   gap: 20px;
   width: 100%;
-  max-width: 1440px;  
+  max-width: 1440px;
   margin: auto;
 
+  @media screen and (max-width: 768px) {
+    padding: 10px 40px;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 10px 16px;
+  }
 `;
 
 const Icons = styled.div``;
@@ -43,20 +52,20 @@ const SelectAnt = styled(Select)`
   }
 `;
 
+const MenuWrapper = styled.div`
+  padding: 30px;
+  background: white;
+  border: 1px solid #e6e9ec;
+`;
+const Section = styled.div`
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 20px;
 
+  @media only screen and (max-width: 375px) {
+    flex-direction: column;
+  }
+`;
 
-  const MenuWrapper = styled.div`
-    padding: 30px;
-    background: white;
-    border: 1px solid #e6e9ec;
-  `;
-  const Section = styled.div`
-    display: flex;
-    justify-content: start;
-    gap: 20px;
-    margin-bottom: 20px;
-  `;
-
-  
-
-export { Container,Icons,SelectAnt, MenuWrapper, Section };
+export { Container, Icons, SelectAnt, MenuWrapper, Section };

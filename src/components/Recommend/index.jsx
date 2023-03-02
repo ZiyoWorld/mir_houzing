@@ -1,15 +1,15 @@
-import React, { useState, useEffect} from 'react'
-import { Container, Content} from './style';
+import React, { useState, useEffect } from "react";
+import { Container, Content, SliderAnt, List } from "./style";
 
 // import { Carousel } from 'antd';
-import Slider from 'react-slick';
-import { useNavigate } from 'react-router-dom/dist';
+// import Slider from "react-slick";
+import { useNavigate } from "react-router-dom/dist";
 // import house1 from '../../assets/img/house1.png';
 // import house2 from '../../assets/img/house2.png';
-import HouseCard from '../HouseCard';
+import HouseCard from "../HouseCard";
+import { Button } from "../Generic";
 
 const { REACT_APP_BASE_URL: url } = process.env;
-
 
 const settings = {
   className: "center",
@@ -27,15 +27,25 @@ const settings = {
 
 export const Recommended = () => {
   const [data, setData] = useState([]);
+
+  const [list, setList] = useState([]);
+  const [load, setLoad] = useState(false);
   const navigate = useNavigate();
 
+  const count = 3;
   useEffect(() => {
     fetch(`${url}/houses/list`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data || []);
+        setList(res?.data.slice(0, 3) || []);
       });
   }, []);
+
+  const onLoadMore = () => {
+    setLoad(!load ? setList(data) : setList(data.slice(0, 3)));
+  };
+
   return (
     <Container>
       <Content>
@@ -44,7 +54,7 @@ export const Recommended = () => {
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </div>
       </Content>
-      <Slider {...settings}>
+      <SliderAnt mobilM tablet {...settings}>
         {data.map((value, index) => {
           return (
             <HouseCard
@@ -55,7 +65,21 @@ export const Recommended = () => {
             />
           );
         })}
-      </Slider>
+      </SliderAnt>
+      <List mobilM tablet list={list}>
+        {list.map((value, index) => {
+          return (
+            <HouseCard
+              key={index}
+              onClick={() => navigate(`/properties/${value.id}`)}
+              data={value}
+            />
+          );
+        })}
+        <Button onClick={onLoadMore} margin={"0 auto"}>
+          loading more
+        </Button>
+      </List>
     </Container>
   );
 };
