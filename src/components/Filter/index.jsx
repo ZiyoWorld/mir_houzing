@@ -172,7 +172,7 @@ const Filter = () => {
         </div>
       </Dropdown>
 
-      <Button display width={160} type="primary">
+      <Button display={"true"} width={160} type="primary">
         {" "}
         <Icons.Search /> Search
       </Button>

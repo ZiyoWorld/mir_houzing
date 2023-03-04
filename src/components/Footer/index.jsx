@@ -77,7 +77,7 @@ export const Why = () => {
           <Content.Item marb>
             <Content.Item></Content.Item>
             Copyright © 2021 CreativeLayers. All Right Reserved.{" "}
-            <span style={{ margin: "0 20px" }}> </span>
+            <span style={{ margin: "10px 20px" }}> </span>
             {/* <Button width={`45`} marginLeft={20}>^</Button> */}
           </Content.Item>
         </Wrapper>

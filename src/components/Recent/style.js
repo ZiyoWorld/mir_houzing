@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +9,15 @@ const Container = styled.div`
   max-width: 1440px;
   width: 100%;
   margin-top: 96px;
+  @media screen and (max-width: 768px) {
+    padding: var(--tablet);
+  }
+  @media screen and (max-width: 425px) {
+    padding: var(--tablet);
+  }
+  @media screen and (max-width: 375px) {
+    padding: var(--tablet);
+  } ;
 `;
 
 const Content = styled.div`

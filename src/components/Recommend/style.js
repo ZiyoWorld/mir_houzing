@@ -10,16 +10,22 @@ const Container = styled.div`
   max-width: 1440px;
   width: 100%;
   margin-top: 96px;
-  @media screen and (max-width: 768px) {
-    padding: 0 45px;
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: 0;
     margin-top: 48px;
+    justify-content: center;
+    align-items: center;
   }
-  @media screen and (max-width: 425px) {
-    padding: 0 16px;
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: 0;
     margin-top: 48px;
+    justify-content: center;
+    align-items: center;
   }
-  @media screen and (max-width: 375px) {
-    padding: 0 16px;
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
     margin-top: 48px;
   } ;
 `;
@@ -29,16 +35,28 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
+  margin: 0 auto;
+  @media (min-width: 0) and (max-width: 768px) {
+    width: 80%;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    /* display: ${({ mobilM }) => (mobilM ? "none" : "flex")}; */
+    width: 80%;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    /* display: ${({ mobilM }) => (mobilM ? "none" : "flex")}; */
+    width: 80%;
+  } ;
 `;
 const SliderAnt = styled(Slider)`
-  @media only screen and (max-width: 768px) {
+  @media (min-width: 0) and (max-width: 768px) {
     display: ${({ tablet }) => (tablet ? "none" : "flex")};
     flex-direction: column;
   }
-  @media screen and (max-width: 425px) {
+  @media (min-width: 0) and (max-width: 425px) {
     display: ${({ mobilM }) => (mobilM ? "none" : "flex")};
   }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 0) and (max-width: 375px) {
     display: ${({ mobilM }) => (mobilM ? "none" : "flex")};
   } ;
 `;
@@ -46,19 +64,21 @@ const SliderAnt = styled(Slider)`
 const List = styled("div")`
   display: none;
   gap: 20px;
-  padding-right: 20px;
+  /* padding-right: 20px; */
   margin: 0 auto;
-  @media only screen and (max-width: 768px) {
+  @media (min-width: 0) and (max-width: 768px) {
     display: ${({ tablet }) => (tablet ? "flex" : "none")};
     flex-direction: column;
+    margin: 15px auto;
   }
-  @media screen and (max-width: 425px) {
+  @media (min-width: 0) and (max-width: 425px) {
     display: ${({ mobilM }) => (mobilM ? "flex" : "none")};
     flex-direction: column;
   }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 0) and (max-width: 375px) {
     display: ${({ mobilM }) => (mobilM ? "flex" : "none")};
     flex-direction: column;
+    padding: var(--mobilM);
   } ;
 `;
 

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-import { ReactComponent as bed } from '../../assets/icons/bed.svg';
-import { ReactComponent as bath } from '../../assets/icons/bath.svg';
-import { ReactComponent as garag } from '../../assets/icons/garag.svg';
-import { ReactComponent as ruler } from '../../assets/icons/ruler.svg';
-import { ReactComponent as love } from '../../assets/icons/love.svg';
-import { ReactComponent as resize } from '../../assets/icons/resize.svg';
-
+import { ReactComponent as bed } from "../../assets/icons/bed.svg";
+import { ReactComponent as bath } from "../../assets/icons/bath.svg";
+import { ReactComponent as garag } from "../../assets/icons/garag.svg";
+import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
+import { ReactComponent as love } from "../../assets/icons/love.svg";
+import { ReactComponent as resize } from "../../assets/icons/resize.svg";
 
 const Container = styled.div`
   width: 100%;
@@ -23,6 +22,14 @@ const Container = styled.div`
       drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
   }
   cursor: pointer;
+  @media (min-width: 0) and (max-width: 768px) {
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    max-width: 330px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    max-width: 330px;
+  } ;
 `;
 
 const Img = styled.img`

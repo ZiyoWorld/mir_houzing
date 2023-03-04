@@ -41,8 +41,8 @@ const Container = styled("button")`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: ${({ margin }) => margin && "0 auto"};
+  text-align: center;
+  /* margin: ${({ margin }) => (margin ? `${margin}px` : `44px`)}; */
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}}px` : `14px`)};
   margin-left: ${({ marginLeft }) => (marginLeft ? `${marginLeft}}px` : `0px`)};
   height: ${({ height }) => (height ? `${height}px` : `44px`)};

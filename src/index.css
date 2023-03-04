@@ -17,6 +17,9 @@ body{
   --backgroundPrimary: #0061df;
   /*padding*/
   --padding: 0 130px;
+  /*media*/
+  --mobilM: 0 16px;
+  --tablet: 0 45px;
   
 }
 .title{

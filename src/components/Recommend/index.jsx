@@ -21,7 +21,6 @@ const settings = {
   arrows: true,
   adaptiveHeight: true,
   dots: true,
-
   appendDots: (dots) => <h1> {dots} </h1>,
 };
 
@@ -76,10 +75,19 @@ export const Recommended = () => {
             />
           );
         })}
-        <Button onClick={onLoadMore} margin={"0 auto"}>
+      </List>
+      <div
+        styled={{
+          display: "flex",
+          alignItems: "center",
+          marginTop: "20px",
+          justifyContent: "center",
+        }}
+      >
+        <Button onClick={onLoadMore} marginTop={15}>
           loading more
         </Button>
-      </List>
+      </div>
     </Container>
   );
 };

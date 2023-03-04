@@ -35,11 +35,16 @@ const Wrapper = styled.div`
   font-size: 16px;
   width: 100%;
   max-width: 1440px;
-  @media only screen and (max-width: 768px) {
-    padding: 0 40px;
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: var(--mobilM);
+    justify-content: space-between;
   }
-  @media only screen and (max-width: 375px) {
-    padding: 0 16px;
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: var(--mobilM);
+    justify-content: space-between;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: var(--mobilM);
   }
 `;
 

@@ -17,12 +17,13 @@ const Container = styled.div`
   gap: 20px;
   width: 100%;
   max-width: 1440px;
-  margin: auto;
+  margin: 10px auto;
+  height: 50px;
 
-  @media screen and (max-width: 768px) {
-    padding: 10px 40px;
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: 10px 16px;
   }
-  @media screen and (max-width: 375px) {
+  @media (min-width: 0) and (max-width: 375px) {
     padding: 10px 16px;
   }
 `;
