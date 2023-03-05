@@ -23,12 +23,12 @@ export const GenCarousel = () => {
 
   return (
     <Container>
-      <Carousel ref={slider} afterChange={onChange}>
+      <Carousel effect="fade" ref={slider} afterChange={onChange}>
         <Img src={house1} />
         <Img src={house2} />
       </Carousel>
       <Blur />
-      <Content>
+      <Content display="true">
         <Content.Title>Skyper Pool Partment</Content.Title>
         <Content.Desc className="subChild">
           112 Glenwood Ave Hyde Park, Boston, MA

@@ -29,6 +29,7 @@ const settings = {
         slidesToScroll: 3,
         infinite: true,
         dots: true,
+        centerMode: true,
       },
     },
     {
@@ -39,7 +40,7 @@ const settings = {
         initialSlide: 1,
         centerMode: true,
         infinite: true,
-        centerPadding: "25px",
+        centerPadding: "10px",
       },
     },
     {
@@ -50,7 +51,7 @@ const settings = {
         initialSlide: 1,
         centerMode: true,
         infinite: true,
-        centerPadding: "25px",
+        centerPadding: "0px",
       },
     },
     {
@@ -61,7 +62,7 @@ const settings = {
         initialSlide: 1,
         centerMode: true,
         infinite: true,
-        centerPadding: "25px",
+        centerPadding: "0px",
       },
     },
   ],

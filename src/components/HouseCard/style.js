@@ -25,10 +25,17 @@ const Container = styled.div`
   @media (min-width: 0) and (max-width: 768px) {
   }
   @media (min-width: 0) and (max-width: 425px) {
-    max-width: 330px;
+    width: 100%;
+    max-width: 360px;
+    min-width: 320px;
   }
   @media (min-width: 0) and (max-width: 375px) {
-    max-width: 330px;
+    max-width: 320px;
+    min-width: 280px;
+  }
+  @media (min-width: 0) and (max-width: 280px) {
+    max-width: 275px;
+    min-width: 220px;
   } ;
 `;
 

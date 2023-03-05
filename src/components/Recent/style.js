@@ -9,15 +9,12 @@ const Container = styled.div`
   max-width: 1440px;
   width: 100%;
   margin-top: 96px;
-  @media screen and (max-width: 768px) {
+  @media (min-width: 0) and (max-width: 768px) {
     padding: var(--tablet);
   }
-  @media screen and (max-width: 425px) {
+  @media (min-width: 0) and (max-width: 425px) {
     padding: var(--tablet);
   }
-  @media screen and (max-width: 375px) {
-    padding: var(--tablet);
-  } ;
 `;
 
 const Content = styled.div`

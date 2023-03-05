@@ -96,9 +96,11 @@ Content.Desc = styled.div`
   @media screen and (max-width: 425px) {
     width: 80%;
     font-size: 14px;
+    display: none;
   }
   @media screen and (max-width: 375px) {
     width: 50%;
+    display: none;
   }
 `;
 

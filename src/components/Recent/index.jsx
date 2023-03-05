@@ -29,6 +29,7 @@ const settings = {
         slidesToScroll: 3,
         infinite: true,
         dots: true,
+        centerMode: true,
       },
     },
     {
@@ -39,18 +40,16 @@ const settings = {
         initialSlide: 2,
         centerMode: true,
         infinite: true,
-        centerPadding: "25px",
+        centerPadding: "15px",
       },
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
         centerMode: true,
         infinite: true,
-        centerPadding: "25px",
+        centerPadding: "5px",
       },
     },
     {
@@ -58,10 +57,10 @@ const settings = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        initialSlide: 2,
-        centerMode: true,
+        initialSlide: 1,
         infinite: true,
-        centerPadding: "25px",
+        centerMode: true,
+        centerPadding: "0px",
       },
     },
   ],
@@ -91,7 +90,7 @@ export const Recent = () => {
           return (
             <HouseCard
               key={index}
-              gap={20}
+              gap={0}
               onClick={() => navigate(`/properties/${value.id}`)}
               data={value}
             />

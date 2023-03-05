@@ -2,6 +2,12 @@ import styled from "styled-components";
 import { ReactComponent as logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as nav } from "../../assets/icons/nav.svg";
 import { ReactComponent as users } from "../../assets/icons/users.svg";
+import { ReactComponent as close } from "../../assets/icons/close.svg";
+import { ReactComponent as fac } from "../../assets/icons/fac.svg";
+import { ReactComponent as ins } from "../../assets/icons/ins.svg";
+import { ReactComponent as tw } from "../../assets/icons/tw.svg";
+import { ReactComponent as ln } from "../../assets/icons/ln.svg";
+
 import { NavLink } from "react-router-dom";
 
 // const sizes = {
@@ -93,10 +99,25 @@ const Item = styled.div`
   width: 100%;
   padding: 0 15px;
 `;
+const NavItem = styled.div`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 24px 0;
+  /* identical to box height, or 156% */
+
+  /* text/1 */
+
+  color: #0d263b;
+  cursor: pointer;
+`;
 
 const Icons = styled.div``;
 Icons.Navs = styled(nav)`
   display: none;
+  cursor: pointer;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -109,5 +130,106 @@ Icons.Users = styled(users)`
     display: flex;
   }
 `;
+Icons.Close = styled(close)`
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  left: 20px;
+  top: 15px;
 
-export { Container, Icons, Wrapper, Section, Logo, Link, Main, Item };
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+`;
+
+const NavigationBar = styled.div`
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+  z-index: 5;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  @media (min-width: 0) and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: black;
+  }
+`;
+const Labels = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const Content = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: ${({ marb }) => (marb ? "0" : "20px")};
+  color: white;
+  font-size: 14px;
+  margin-top: ${({ mar }) => (mar ? "30px" : "0")};
+  cursor: pointer;
+  &:hover {
+    color: red;
+    transition: all 0.5s linear;
+  }
+  @media (min-width: 0) and (max-width: 768px) {
+    margin-top: 10px 0;
+  }
+`;
+Icons.Facebook = styled(fac)`
+  margin-right: 24px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+    transition: all linear 0.5s;
+  }
+`;
+Icons.Instagram = styled(ins)`
+  margin-right: 24px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+    transition: all linear 0.5s;
+  }
+`;
+Icons.Twitter = styled(tw)`
+  margin-right: 24px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+    transition: all linear 0.5s;
+  }
+`;
+Icons.Linkedin = styled(ln)`
+  margin-right: 24px;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.5);
+    transition: all linear 0.5s;
+  }
+`;
+
+export {
+  Container,
+  Icons,
+  NavigationBar,
+  Wrapper,
+  Section,
+  Logo,
+  Link,
+  Main,
+  Item,
+  NavItem,
+  Labels,
+  Content,  
+};

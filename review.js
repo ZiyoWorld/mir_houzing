@@ -1,4 +1,3 @@
-
 // 1-dars
 // ➤ Project Yasash
 // ➤ Projectni strukturalash (pattern)
@@ -37,7 +36,13 @@
 // ➤ place to center
 // ➤ Change flex to grid
 
- // self -study 
- // house item oxirigacha
- // home da 1 sections
- 
+// self -study
+// house item oxirigacha
+// home da 1 sections
+
+// next homework
+// responsive oxirigacha
+// navigation barni quyish
+// userni ustida
+// slider ustida
+//
