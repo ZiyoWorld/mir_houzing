@@ -49,6 +49,7 @@ const Content = styled.div`
   } ;
 `;
 const SliderAnt = styled(Slider)`
+  margin-top: 48px;
   @media (min-width: 0) and (max-width: 768px) {
     display: ${({ tablet }) => (tablet ? "none" : "flex")};
     flex-direction: column;
@@ -78,7 +79,7 @@ const List = styled("div")`
   @media (min-width: 0) and (max-width: 375px) {
     display: ${({ mobilM }) => (mobilM ? "flex" : "none")};
     flex-direction: column;
-    padding: var(--mobilM);
+    padding: var(--mobilM); 
   } ;
 `;
 

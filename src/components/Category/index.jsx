@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Container, Content } from "./style";
 
-// import { Carousel } from 'antd';
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom/dist";
-// import house1 from '../../assets/img/house1.png';
-// import house2 from '../../assets/img/house2.png';
+
 import CategoryCard from "../CategoryCard";
 const { REACT_APP_BASE_URL: url } = process.env;
 

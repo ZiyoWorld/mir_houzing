@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import { Arrow, Container, Img, Blur, Content } from "./style";
-
+import { Arrow, Blur, Container, Content, Img } from "./style";
 import { Carousel } from "antd";
-import house1 from "../../assets/img/house1.png";
-import house2 from "../../assets/img/house2.png";
+
+import img1 from "../../assets/img/house1.png";
+import img2 from "../../assets/img/house2.png";
 
 export const GenCarousel = () => {
   const slider = useRef();
@@ -23,19 +23,19 @@ export const GenCarousel = () => {
 
   return (
     <Container>
-      <Carousel effect="fade" ref={slider} afterChange={onChange}>
-        <Img src={house1} />
-        <Img src={house2} />
+      <Carousel ref={slider} afterChange={onChange}>
+        <Img src={img1} />
+        <Img src={img2} />
       </Carousel>
       <Blur />
-      <Content display="true">
+      <Content>
         <Content.Title>Skyper Pool Partment</Content.Title>
         <Content.Desc className="subChild">
           112 Glenwood Ave Hyde Park, Boston, MA
         </Content.Desc>
         <Content.Price>5,250 / month</Content.Price>
       </Content>
-      <Arrow data-name="left" onClick={onMove} left="true" />
+      <Arrow data-name="left" onClick={onMove} left={"true"} />
       <Arrow data-name="right" onClick={onMove} name="right" />
     </Container>
   );

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Container, Content } from "./style";
 
-// import { Carousel } from 'antd';
+
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom/dist";
-// import house1 from '../../assets/img/house1.png';
-// import house2 from '../../assets/img/house2.png';
+
+
 import HouseCard from "../HouseCard";
 
 const { REACT_APP_BASE_URL: url } = process.env;
@@ -14,7 +14,7 @@ const settings = {
   className: "center",
   centerMode: true,
   infinite: true,
-  centerPadding: "25px",
+  centerPadding: "5px",
   slidesToShow: 3,
   speed: 500,
   arrows: true,
@@ -79,6 +79,7 @@ export const Recent = () => {
   }, []);
   return (
     <Container>
+      
       <Content>
         <h1 className="title">Recent Properties for Rent</h1>
         <div className="info">

@@ -4,7 +4,7 @@ import { ReactComponent as nav } from "../../assets/icons/nav.svg";
 import { ReactComponent as users } from "../../assets/icons/users.svg";
 import { ReactComponent as close } from "../../assets/icons/close.svg";
 import { ReactComponent as fac } from "../../assets/icons/fac.svg";
-import { ReactComponent as ins } from "../../assets/icons/ins.svg";
+import { ReactComponent as inc } from "../../assets/icons/inc.svg";
 import { ReactComponent as tw } from "../../assets/icons/tw.svg";
 import { ReactComponent as ln } from "../../assets/icons/ln.svg";
 
@@ -171,7 +171,7 @@ const Labels = styled.div`
 
 const Content = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-bottom: ${({ marb }) => (marb ? "0" : "20px")};
   color: white;
@@ -194,8 +194,9 @@ Icons.Facebook = styled(fac)`
     transition: all linear 0.5s;
   }
 `;
-Icons.Instagram = styled(ins)`
+Icons.Instagram = styled(inc)`
   margin-right: 24px;
+  margin-top: 10px;
   cursor: pointer;
   &:hover {
     transform: scale(1.5);
@@ -231,5 +232,5 @@ export {
   Item,
   NavItem,
   Labels,
-  Content,  
+  Content,
 };

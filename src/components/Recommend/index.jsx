@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Content, SliderAnt, List } from "./style";
 
-// import { Carousel } from 'antd';
-// import Slider from "react-slick";
 import { useNavigate } from "react-router-dom/dist";
-// import house1 from '../../assets/img/house1.png';
-// import house2 from '../../assets/img/house2.png';
+
 import HouseCard from "../HouseCard";
 import { Button } from "../Generic";
 
@@ -31,7 +28,7 @@ export const Recommended = () => {
   const [load, setLoad] = useState(false);
   const navigate = useNavigate();
 
-  const count = 3;
+  // const count = 3;
   useEffect(() => {
     fetch(`${url}/houses/list`)
       .then((res) => res.json())
@@ -76,15 +73,8 @@ export const Recommended = () => {
           );
         })}
       </List>
-      <div
-        styled={{
-          display: "flex",
-          alignItems: "center",
-          marginTop: "20px",
-          justifyContent: "center",
-        }}
-      >
-        <Button onClick={onLoadMore} marginTop={15}>
+      <div>
+        <Button onClick={onLoadMore}  marginTop={15}>
           loading more
         </Button>
       </div>

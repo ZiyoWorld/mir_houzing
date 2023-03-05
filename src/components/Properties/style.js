@@ -13,21 +13,21 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   margin-top: 50px;
-  @media only screen and (max-width: 1200px) {
-    padding: 0 90px;
+
+  @media (min-width: 0) and (max-width: 992px) {
+    padding: var(--tablet);
     grid-gap: 15px;
     margin: 50px auto;
   }
-
-  @media only screen and (max-width: 992px) {
-    padding: 0 45px;
-    grid-gap: 15px;
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: var(--mobilM);
+    grid-gap: 5px;
     margin: 50px auto;
   }
-
-  @media only screen and (max-width: 375px) {
-    padding: 0 16px;
-    grid-gap: 15px;
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: var(--mobilM);
+    grid-gap: 5px;
+    margin: 50px auto;
   }
 `;
 

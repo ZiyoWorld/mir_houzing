@@ -30,7 +30,7 @@ const Container = styled.div`
     min-width: 320px;
   }
   @media (min-width: 0) and (max-width: 375px) {
-    max-width: 320px;
+    max-width: 330px;
     min-width: 280px;
   }
   @media (min-width: 0) and (max-width: 280px) {

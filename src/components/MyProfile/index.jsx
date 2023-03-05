@@ -22,13 +22,13 @@ export const MyProfile = () => {
       key: "name",
       render: (data) => {
         return (
-          <User>
+          <User mobilM>
             <User.Img
               src={
                 (data?.attachments && data?.attachments[0]?.imgPath) || noimg
               }
             />
-            <User flex>
+            <User flex mobilM>
               <div className="subTitle">
                 {data.country}, {data.address}
               </div>
@@ -40,12 +40,16 @@ export const MyProfile = () => {
               </del>
             </User>
             <div style={{ marginLeft: "auto" }}>
-              <Button width={71} height={23} type={'dark'}>For Sale</Button>
+              <Button width={71} display={"true"} height={23} type={"dark"}>
+                For Sale
+              </Button>
             </div>
+            <div></div>
           </User>
         );
       },
     },
+
     {
       title: "Year Build",
       render: (data) => <span> {data.houseDetails.yearBuilt}</span>,

@@ -72,14 +72,8 @@ const Navbar = () => {
         </Item>
       ),
     },
-    // {
-    //   key: 2,
-    //   label: (
-    //       <Item data-name="my-properties" onClick={onClickProfile}>My Properties</Item>
-    //   )
-    // },
     {
-      key: 3,
+      key: 2,
       label: (
         <Item data-name="favorite" onClick={onClickProfile}>
           Favorites
@@ -87,7 +81,7 @@ const Navbar = () => {
       ),
     },
     {
-      key: 4,
+      key: 3,
       label: (
         <Item data-name="logout" onClick={onClickProfile}>
           Log out
@@ -97,74 +91,72 @@ const Navbar = () => {
   ];
 
   return (
-    <React.Fragment>
-      <Container>
-        <Main>
-          <Wrapper>
-            {openNavbar ? (
-              <NavigationBar>
-                <Icons.Close onClick={onOpenChangeNavbar} />
-                <Labels>
-                  <NavItem onClick={onHome}>Home</NavItem>
-                  <NavItem onClick={onProper}>Properties</NavItem>
-                  <NavItem onClick={onLog}>Log out</NavItem>
-                  <Content mar>
-                    <Icons.Facebook />
-                    <Icons.Instagram />
-                    <Icons.Twitter />
-                    <Icons.Linkedin />
-                  </Content>
-                </Labels>
-              </NavigationBar>
+    <Container>
+      <Main>
+        <Wrapper>
+          {openNavbar ? (
+            <NavigationBar>
+              <Icons.Close onClick={onOpenChangeNavbar} />
+              <Labels>
+                <NavItem onClick={onHome}>Home</NavItem>
+                <NavItem onClick={onProper}>Properties</NavItem>
+                <NavItem onClick={onLog}>Log out</NavItem>
+                <Content mar>
+                  <Icons.Facebook />
+                  <Icons.Instagram />
+                  <Icons.Twitter />
+                  <Icons.Linkedin />
+                </Content>
+              </Labels>
+            </NavigationBar>
+          ) : (
+            <Icons.Navs onClick={onOpenChangeNavbar} />
+          )}
+          <Section tablet onClick={() => navigate("/home")} logo>
+            <Logo /> <h3>Houzing</h3>
+          </Section>
+          <Section mobileM mobileX>
+            {navbar.map(({ title, path, hidden }, index) => {
+              return (
+                !hidden && (
+                  <Link
+                    className={({ isActive }) => isActive && "active"}
+                    key={index}
+                    to={path}
+                  >
+                    {title}
+                  </Link>
+                )
+              );
+            })}
+          </Section>
+          <Section mobileM mobileX tablet>
+            {token ? (
+              <Dropdown
+                menu={{ items }}
+                open={open}
+                onOpenChange={onOpenChange}
+                placement="topRight"
+                trigger={"click"}
+                arrow={{ pointAtCenter: true }}
+              >
+                <div>
+                  <Button type={"dark"}>Profile</Button>
+                </div>
+              </Dropdown>
             ) : (
-              <Icons.Navs onClick={onOpenChangeNavbar} />
+              <Button onClick={onClick} type={"dark"}>
+                Sign In
+              </Button>
             )}
-            <Section tablet onClick={() => navigate("/home")} logo>
-              <Logo /> <h3>Houzing</h3>
-            </Section>
-            <Section mobileM mobileX>
-              {navbar.map(({ title, path, hidden }, index) => {
-                return (
-                  !hidden && (
-                    <Link
-                      className={({ isActive }) => isActive && "active"}
-                      key={index}
-                      to={path}
-                    >
-                      {title}
-                    </Link>
-                  )
-                );
-              })}
-            </Section>
-            <Section mobileM mobileX tablet>
-              {token ? (
-                <Dropdown
-                  menu={{ items }}
-                  open={open}
-                  onOpenChange={onOpenChange}
-                  placement="topRight"
-                  trigger={"click"}
-                  arrow={{ pointAtCenter: true }}
-                >
-                  <div>
-                    <Button type={"dark"}>Profile</Button>
-                  </div>
-                </Dropdown>
-              ) : (
-                <Button onClick={onClick} type={"dark"}>
-                  Sign In
-                </Button>
-              )}
-            </Section>
-            <Icons.Users />
-          </Wrapper>
-        </Main>
-        <Filter />
-        <Outlet />
-        <Footer />
-      </Container>
-    </React.Fragment>
+          </Section>
+          <Icons.Users />
+        </Wrapper>
+      </Main>
+      <Filter />
+      <Outlet />
+      <Footer />
+    </Container>
   );
 };
 

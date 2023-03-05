@@ -42,7 +42,6 @@ const Container = styled("button")`
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* margin: ${({ margin }) => (margin ? `${margin}px` : `44px`)}; */
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}}px` : `14px`)};
   margin-left: ${({ marginLeft }) => (marginLeft ? `${marginLeft}}px` : `0px`)};
   height: ${({ height }) => (height ? `${height}px` : `44px`)};
@@ -55,11 +54,12 @@ const Container = styled("button")`
   &:active {
     opacity: 0.7;
   }
-  @media screen and (max-width: 425px) {
+
+  @media (min-width: 0) and (max-width: 425px) {
     display: ${({ display }) => (display ? "none" : "flex")};
   }
-  @media screen and (max-width: 375px) {
-    display: ${({ display }) => (display ? "none" : "flex")};
+  @media (min-width: 0) and (max-width: 375px) {
+    display: ${({ display }) => (display  ? "none" : "flex")};
   }
 `;
 
