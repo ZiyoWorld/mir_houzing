@@ -112,6 +112,15 @@ const NavItem = styled.div`
 
   color: #0d263b;
   cursor: pointer;
+  @media (min-width: 0) and (max-width: 768px) {
+    display: ${({ hidden }) => hidden && "none"};
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    display: ${({ hidden }) => hidden && "block"};
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    display: ${({ hidden }) => hidden && "block"};
+  }
 `;
 
 const Icons = styled.div``;

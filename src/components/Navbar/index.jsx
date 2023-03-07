@@ -58,6 +58,14 @@ const Navbar = () => {
     navigate("/properties");
     setOpenNavbar(!openNavbar);
   };
+  const onProfile = () => {
+    navigate("/my-profile");
+    setOpenNavbar(!openNavbar);
+  };
+  const onFavorite = () => {
+    navigate("/favorite");
+    setOpenNavbar(!openNavbar);
+  };
   const onLog = () => {
     localStorage.removeItem("token");
     navigate("/signin");
@@ -101,7 +109,9 @@ const Navbar = () => {
               <Labels>
                 <NavItem onClick={onHome}>Home</NavItem>
                 <NavItem onClick={onProper}>Properties</NavItem>
-                <NavItem onClick={onLog}>Log out</NavItem>
+                <NavItem hidden onClick={onProfile}>My profile</NavItem>
+                <NavItem hidden onClick={onFavorite}>Favorites</NavItem>
+                <NavItem  onClick={onLog}>Log out</NavItem>
                 <Content mar>
                   <Icons.Facebook />
                   <Icons.Instagram />
