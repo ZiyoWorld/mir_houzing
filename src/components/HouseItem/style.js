@@ -243,13 +243,22 @@ const ImageContainer = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+  gap: 10px;
   margin-bottom: 24px;
   margin-top: 24px;
+  @media (min-width: 0) and (max-width: 1200px) {
+    /* padding: var(--tablet); */
+    justify-content: center;
+  }
+  @media (min-width: 0) and (max-width: 900px) {
+    /* padding: var(--tablet); */
+    flex-direction: column;
+  }
   @media (min-width: 0) and (max-width: 768px) {
     padding: var(--tablet);
     flex-direction: column;
   }
-  @media (min-width: 0) and (max-width: 556px) {
+  @media (min-width: 0) and (max-width: 560px) {
     padding: var(--mobilM);
     flex-direction: column;
   }
@@ -260,20 +269,32 @@ const ImageContainer = styled.div`
   @media (min-width: 0) and (max-width: 375px) {
     padding: var(--mobilM);
     flex-direction: column;
+    gap: 5px;
   }
-  /* @media (min-width: 0) and (max-width: 330px) {
+  @media (min-width: 0) and (max-width: 320px) {
     padding: var(--mobilM);
     flex-direction: column;
-  } */
+    gap: 5px;
+  }
 `;
 ImageContainer.Main = styled.img`
   width: 100%;
   max-width: 540px;
   max-height: 400px;
+  @media (min-width: 0) and (max-width: 1200px) {
+    width: 100%;
+    max-width: 540px;
+    max-height: 400px;
+  }
+  @media (min-width: 0) and (max-width: 900px) {
+    width: 100%;
+    max-width: 700px;
+    max-height: 340px;
+  }
   @media (min-width: 0) and (max-width: 768px) {
     width: 100%;
-    max-width: 450px;
-    max-height: 300px;
+    max-width: 600px;
+    max-height: 340px;
   }
   @media (min-width: 0) and (max-width: 425px) {
     width: 100%;
@@ -291,66 +312,90 @@ ImageContainer.Subimg = styled.img`
   width: 100%;
   max-width: 250px;
   max-height: 190px;
+  @media (min-width: 0) and (max-width: 1200px) {
+    width: 100%;
+    max-width: 230px;
+    max-height: 130px;
+  }
+  @media (min-width: 0) and (max-width: 900px) {
+    width: 100%;
+    max-width: 220px;
+    max-height: 140px;
+  }
   @media (min-width: 0) and (max-width: 768px) {
     width: 100%;
     max-width: 220px;
-    max-height: 120px;
+    max-height: 140px;
   }
-  @media (min-width: 0) and (max-width: 556px) {
+  @media (min-width: 0) and (max-width: 560px) {
     width: 100%;
-    max-width: 200px;
+    max-width: 190px;
     max-height: 110px;
-    min-width: 161px;
-    min-height: 94px;
   }
   @media (min-width: 0) and (max-width: 425px) {
     width: 100%;
     max-width: 161px;
     max-height: 94px;
   }
-  @media (min-width: 0) and (max-width: 375px) {
+  @media (min-width: 330px) and (max-width: 375px) {
     width: 100%;
-    max-width: 135px;
-    max-height: 70px;
-    min-width: 100px;
-    min-height: 60px;
+    max-width: 140px;
+    max-height: 75px;
+  }
+  @media (min-width: 0) and (max-width: 330px) {
+    width: 100%;
+    max-width: 250px;
+    max-height: 190px;
   }
 `;
 const ImgContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   margin-left: 20px;
+  @media (min-width: 0) and (max-width: 1200px) {
+    /* justify-content: space-between; */
+    margin-left: 0px;
+    margin-top: 15px;
+    gap: 15px;
+  }
+  @media (min-width: 0) and (max-width: 900px) {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 15px;
+    gap: 20px;
+  }
   @media (min-width: 0) and (max-width: 768px) {
     justify-content: space-between;
     margin-left: 0px;
     margin-top: 15px;
     gap: 20px;
   }
-  @media (min-width: 0) and (max-width: 556px) {
-    justify-content: space-between;
+  @media (min-width: 0) and (max-width: 560px) {
+    justify-content: space-around;
     margin-left: 0px;
     margin-top: 15px;
     gap: 5px;
   }
+
   @media (min-width: 0) and (max-width: 425px) {
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 0px;
-    margin-top: 15px;
+    margin-top: 10px;
     gap: 5px;
   }
-  @media (min-width: 0) and (max-width: 375px) {
-    justify-content: space-between;
-    margin-left: 0px;
-    margin-top: 15px;
-    gap: 5px;
-  }
-  /* @media (min-width: 0) and (max-width: 330px) {
+  @media (min-width: 330px) and (max-width: 375px) {
     justify-content: space-between;
     margin-left: 0px;
     margin-top: 10px;
+    gap: 5px;
+  }
+  @media (min-width: 0) and (max-width: 330px) {
+    justify-content: center;
+    margin-left: 0px;
+    margin-top: 10px;
     gap: 4px;
-  } */
+  }
 `;
 
 const Blur = styled.div`
@@ -380,30 +425,40 @@ Blur.Container = styled.div`
   width: 100%;
   max-width: 250px;
   max-height: 190px;
-
+  @media (min-width: 0) and (max-width: 1200px) {
+    width: 100%;
+    max-width: 230px;
+    max-height: 130px;
+  }
+  @media (min-width: 0) and (max-width: 900px) {
+    width: 100%;
+    max-width: 230px;
+    max-height: 150px;
+  }
   @media (min-width: 0) and (max-width: 768px) {
     width: 100%;
-    max-width: 200px;
-    max-height: 110px;
+    max-width: 220px;
+    max-height: 140px;
   }
-  @media (min-width: 0) and (max-width: 556px) {
+  @media (min-width: 0) and (max-width: 560px) {
     width: 100%;
-    max-width: 200px;
+    max-width: 190px;
     max-height: 110px;
-    min-width: 161px;
-    min-height: 94px;
   }
   @media (min-width: 0) and (max-width: 425px) {
     width: 100%;
     max-width: 161px;
     max-height: 94px;
   }
-  @media (min-width: 0) and (max-width: 375px) {
+  @media (min-width: 330px) and (max-width: 375px) {
     width: 100%;
-    max-width: 135px;
-    max-height: 70px;
-    min-width: 100px;
-    min-height: 60px;
+    max-width: 140px;
+    max-height: 75px;
+  }
+  @media (min-width: 0) and (max-width: 330px) {
+    width: 100%;
+    max-width: 250px;
+    max-height: 190px;
   }
 `;
 

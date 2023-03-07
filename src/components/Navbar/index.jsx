@@ -109,9 +109,13 @@ const Navbar = () => {
               <Labels>
                 <NavItem onClick={onHome}>Home</NavItem>
                 <NavItem onClick={onProper}>Properties</NavItem>
-                <NavItem hidden onClick={onProfile}>My profile</NavItem>
-                <NavItem hidden onClick={onFavorite}>Favorites</NavItem>
-                <NavItem  onClick={onLog}>Log out</NavItem>
+                <NavItem hidden onClick={onProfile}>
+                  My profile
+                </NavItem>
+                <NavItem hidden onClick={onFavorite}>
+                  Favorites
+                </NavItem>
+                <NavItem onClick={onLog}>Log out</NavItem>
                 <Content mar>
                   <Icons.Facebook />
                   <Icons.Instagram />

@@ -8228,6 +8228,14 @@ react-refresh@^0.11.0:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.11.0.tgz"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
+react-responsive-gallery@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/react-responsive-gallery/-/react-responsive-gallery-3.0.3.tgz#ba25d90b9a154d7542bc7fd3b5024734c73a1d4a"
+  integrity sha512-Bc2H3Ym8JK/HRnKmbz/NGA+GexJomIYYJk11Nq/hNXU7TWRh3+jeItSQpH+xu3Stn3/trvDapclM/1qfXLMHmQ==
+  dependencies:
+    styled-components "^5.3.6"
+    yet-another-react-lightbox "^2.2.7"
+
 react-router-dom@^6.7.0:
   version "6.8.0"
   resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.8.0.tgz"
@@ -10110,6 +10118,11 @@ yargs@^16.2.0:
     string-width "^4.2.0"
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
+
+yet-another-react-lightbox@^2.2.7:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/yet-another-react-lightbox/-/yet-another-react-lightbox-2.6.0.tgz#6f37760d49185841b65976a98bdc1d58bdf90af5"
+  integrity sha512-Iclm8yr+Re9GvptzEh/VLOO+E31n6zWxJxrx5xcIQNFrktssbjCUOJWBwLtpwPLkoUFhVLC/yIeB1dJ+XajmEA==
 
 yocto-queue@^0.1.0:
   version "0.1.0"
