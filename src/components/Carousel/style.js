@@ -31,6 +31,16 @@ const Img = styled.img`
     height: 350px;
     background-size: cover;
   }
+  @media screen and (max-width: 425px) {
+    width: fit-content;
+    height: 350px;
+    background-size: cover;
+  }
+  @media screen and (max-width: 375px) {
+    width: fit-content;
+    height: 300px;
+    background-size: cover;
+  }
 `;
 
 const Blur = styled.div`
@@ -41,8 +51,14 @@ const Blur = styled.div`
   left: 0;
   background: rgba(0, 0, 0, 0.4);
   height: 450px;
-  @media screen and (max-width: 768px) {
+  @media (min-width: 0) and (max-width: 768px) {
     height: 350px;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    height: 350px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    height: 300px;
   }
 `;
 

@@ -44,5 +44,15 @@
 // responsive oxirigacha
 // navigation barni quyish
 // userni ustida
-// slider ustida
+// slider ustida glar
 //
+
+// responsive - 6.
+// responsive 2 section tugatish
+// homedagi imgs
+// user haqida
+// filter advanced
+
+// responsive - 7.
+// responsive 1 section tugatish only img
+// homedagi imgs

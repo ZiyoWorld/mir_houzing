@@ -125,9 +125,10 @@ Icons.Navs = styled(nav)`
 `;
 Icons.Users = styled(users)`
   display: none;
-
+  cursor: pointer;
   @media screen and (max-width: 425px) {
     display: flex;
+    cursor: pointer;
   }
 `;
 Icons.Close = styled(close)`

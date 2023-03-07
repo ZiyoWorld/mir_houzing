@@ -1,6 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
-import { Wrapper, MenuWrapper, Section, SelectAnt, IconDelete, Hidden } from "./style";
+import {
+  Wrapper,
+  MenuWrapper,
+  Section,
+  SelectAnt,
+  IconDelete,
+  Hidden,
+} from "./style";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useRequest from "../../hooks/useRequest";
@@ -229,7 +236,9 @@ export const AddNewHouse = () => {
               name="description"
             />
           </Section>
-          <h2 className="subtitle" style={{marginBottom: "15px"}}>Additional</h2>
+          <h2 className="subtitle" style={{ marginBottom: "15px" }}>
+            Additional
+          </h2>
 
           <Section gap>
             <Section flex>
@@ -312,7 +321,10 @@ export const AddNewHouse = () => {
               >
                 Furniture
               </Checkbox>
-              <Checkbox onChange={formik.handleChange} name="componentsDto.gasStove">
+              <Checkbox
+                onChange={formik.handleChange}
+                name="componentsDto.gasStove"
+              >
                 Gas Stove
               </Checkbox>
               <Checkbox

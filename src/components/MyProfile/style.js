@@ -94,11 +94,6 @@ const User = styled.div`
   display: flex;
   flex-direction: ${({ flex }) => (flex ? "column" : "row")};
   margin-left: ${({ flex }) => flex && "16px"};
-
-  @media (min-width: 0) and (max-width: 425px) {
-  }
-  @media (min-width: 0) and (max-width: 375px) {
-  }
 `;
 
 User.Img = styled.img`

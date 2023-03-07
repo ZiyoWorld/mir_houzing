@@ -12,18 +12,45 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: ${({ flex }) => flex};
-  max-height: ${({height})=> height? "476px" : "fit-content"};
-  ~ .user{
-      background: #FFFFFF;
-      /* border */
-      border: 1px solid #E6E9EC;
-      border-radius: 3px;
-      margin-left: 20px;
-      padding: 24px;
-      gap:16px;
+  max-height: ${({ height }) => (height ? "476px" : "fit-content")};
+  ~ .user {
+    background: #ffffff;
+    /* border */
+    border: 1px solid #e6e9ec;
+    border-radius: 3px;
+    margin-left: 20px;
+    padding: 24px;
+    gap: 16px;
+    @media (min-width: 0) and (max-width: 768px) {
+      padding: var(--tablet);
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    @media (min-width: 0) and (max-width: 425px) {
+      padding: var(--mobilM);
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    @media (min-width: 0) and (max-width: 375px) {
+      padding: var(--mobilM);
+      flex-direction: column;
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: var(--mobilM);
+    flex-direction: column;
   }
 `;
-
 
 const Wrapper = styled.div`
   padding: var(--padding);
@@ -31,43 +58,69 @@ const Wrapper = styled.div`
   margin: auto;
   display: flex;
   max-width: 1440px;
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
 `;
-
-
-
 
 const Section = styled.div`
   display: flex;
   align-items: ${({ ends }) => (ends ? "flex-end" : "center")};
   flex-direction: ${({ flex }) => !flex && "column"};
   justify-content: ${({ ends }) => (ends ? "flex-end" : "flex-start")};
-  margin-top:${({flex})=> flex? "20px" : 0};
+  margin-top: ${({ flex }) => (flex ? "20px" : 0)};
+  gap: 5px;
+  @media (min-width: 0) and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    flex-wrap: wrap;
+    flex-direction: ${({ flex }) => !flex && "column"};
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    flex-wrap: wrap;
+    flex-direction: ${({ flex }) => !flex && "column"};
+  }
 `;
-
 
 const Content = styled.div`
   display: flex;
-  justify-content: ${({start})=>start? "flex-start": "space-between"};
+  justify-content: ${({ start }) => (start ? "flex-start" : "space-between")};
   align-items: center;
   width: 100%;
+  @media (min-width: 0) and (max-width: 768px) {
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    flex-wrap: wrap;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    flex-wrap: wrap;
+  }
 `;
 Content.Parag = styled.div`
-/* Paragraph/Small/Semibold */
+  /* Paragraph/Small/Semibold */
 
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-/* identical to box height, or 143% */
-padding-right: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  padding-right: 10px;
 
-/* Color/2 */
+  /* Color/2 */
 
-color: #0D263B;
-
+  color: #0d263b;
 `;
-
 
 Section.Title = styled.div`
   font-family: "Montserrat";
@@ -81,8 +134,8 @@ Section.Title = styled.div`
   /* text/1 */
   color: #0d263b;
   margin: ${({ desc }) => (desc ? "32px" : "0px")} 0;
-  margin-top: ${({mt})=> `${mt}px`};
-  margin-bottom: ${({mb})=> `${mb}px`};
+  margin-top: ${({ mt }) => `${mt}px`};
+  margin-bottom: ${({ mb }) => `${mb}px`};
 `;
 
 const Details = styled.div`
@@ -90,6 +143,17 @@ const Details = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 32px;
+  @media (min-width: 0) and (max-width: 768px) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    flex-wrap: wrap;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    flex-wrap: wrap;
+  }
 `;
 
 Details.Title = styled.div`
@@ -149,11 +213,11 @@ const Description = styled.div`
   max-height: 224px;
   overflow-y: auto;
   height: 100%;
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     width: 4px;
     background-color: #f2f2f2;
   }
-  &::-webkit-scrollbar-thumb{
+  &::-webkit-scrollbar-thumb {
     background-color: #696969;
     border-radius: 8px;
   }
@@ -167,10 +231,10 @@ User.Img = styled.img`
   margin-right: 15px;
 `;
 const Line = styled.div`
-   height: 1px;
-   width: 100%;
-   background-color: #E6E9EC;
-   margin-top: 48px;
+  height: 1px;
+  width: 100%;
+  background-color: #e6e9ec;
+  margin-top: 48px;
 `;
 
 const ImageContainer = styled.div`
@@ -181,25 +245,112 @@ const ImageContainer = styled.div`
   margin: auto;
   margin-bottom: 24px;
   margin-top: 24px;
-
+  @media (min-width: 0) and (max-width: 768px) {
+    padding: var(--tablet);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 556px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  }
+  /* @media (min-width: 0) and (max-width: 330px) {
+    padding: var(--mobilM);
+    flex-direction: column;
+  } */
 `;
 ImageContainer.Main = styled.img`
-   width: 100%;
-   max-width: 580px;
-   max-height: 400px;
-
- `;
- ImageContainer.Subimg = styled.img`
+  width: 100%;
+  max-width: 540px;
+  max-height: 400px;
+  @media (min-width: 0) and (max-width: 768px) {
+    width: 100%;
+    max-width: 450px;
+    max-height: 300px;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    width: 100%;
+    max-width: 375px;
+    max-height: 250px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    width: 100%;
+    max-width: 343px;
+    max-height: 200px;
+  }
+`;
+ImageContainer.Subimg = styled.img`
   position: relative;
   width: 100%;
-  max-width: 280px;
+  max-width: 250px;
   max-height: 190px;
- `;
+  @media (min-width: 0) and (max-width: 768px) {
+    width: 100%;
+    max-width: 220px;
+    max-height: 120px;
+  }
+  @media (min-width: 0) and (max-width: 556px) {
+    width: 100%;
+    max-width: 200px;
+    max-height: 110px;
+    min-width: 161px;
+    min-height: 94px;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    width: 100%;
+    max-width: 161px;
+    max-height: 94px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    width: 100%;
+    max-width: 135px;
+    max-height: 70px;
+    min-width: 100px;
+    min-height: 60px;
+  }
+`;
 const ImgContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   margin-left: 20px;
+  @media (min-width: 0) and (max-width: 768px) {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 15px;
+    gap: 20px;
+  }
+  @media (min-width: 0) and (max-width: 556px) {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  /* @media (min-width: 0) and (max-width: 330px) {
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 10px;
+    gap: 4px;
+  } */
 `;
 
 const Blur = styled.div`
@@ -227,15 +378,47 @@ const Blur = styled.div`
 Blur.Container = styled.div`
   position: relative;
   width: 100%;
-  max-width: 280px;
+  max-width: 250px;
   max-height: 190px;
+
+  @media (min-width: 0) and (max-width: 768px) {
+    width: 100%;
+    max-width: 200px;
+    max-height: 110px;
+  }
+  @media (min-width: 0) and (max-width: 556px) {
+    width: 100%;
+    max-width: 200px;
+    max-height: 110px;
+    min-width: 161px;
+    min-height: 94px;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    width: 100%;
+    max-width: 161px;
+    max-height: 94px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    width: 100%;
+    max-width: 135px;
+    max-height: 70px;
+    min-width: 100px;
+    min-height: 60px;
+  }
 `;
 
 export {
-  Container, ImgContainer,
-  Line, User,
-  Wrapper, Content,
-  Title, Details,
-  Description, Section,
-  Icons, ImageContainer, Blur
+  Container,
+  ImgContainer,
+  Line,
+  User,
+  Wrapper,
+  Content,
+  Title,
+  Details,
+  Description,
+  Section,
+  Icons,
+  ImageContainer,
+  Blur,
 };

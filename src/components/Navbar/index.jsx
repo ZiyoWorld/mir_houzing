@@ -53,6 +53,7 @@ const Navbar = () => {
     navigate("/home");
     setOpenNavbar(!openNavbar);
   };
+
   const onProper = () => {
     navigate("/properties");
     setOpenNavbar(!openNavbar);
@@ -150,7 +151,7 @@ const Navbar = () => {
               </Button>
             )}
           </Section>
-          <Icons.Users />
+          <Icons.Users onClick={() => navigate("/signin")} />
         </Wrapper>
       </Main>
       <Filter />

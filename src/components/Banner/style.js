@@ -5,11 +5,26 @@ const Container = styled.div`
   position: relative;
   height: fit-content;
   display: flex;
+  width: 100%;
 `;
 
 const Img = styled.img`
   width: 100%;
   height: 500px;
+  @media (min-width: 0) and (max-width: 768px) {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    width: 100%;
+    height: 300px;
+  }
 `;
 
 const Blur = styled.div`
@@ -20,6 +35,15 @@ const Blur = styled.div`
   left: 0;
   background: rgba(0, 0, 0, 0.4);
   height: 500px;
+  @media (min-width: 0) and (max-width: 768px) {
+    height: 350px;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    height: 350px;
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    height: 300px;
+  }
 `;
 
 const Content = styled.div`
@@ -60,11 +84,11 @@ Content.Title = styled.h1`
   }
   @media (min-width: 0) and (max-width: 425px) {
     font-size: 24px;
-    width: 80%;
+    width: 90%;
   }
   @media (min-width: 0) and (max-width: 375px) {
     font-size: 20px;
-    width: 70%;
+    width: 80%;
   }
 `;
 

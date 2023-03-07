@@ -20,6 +20,7 @@ export const MyProfile = () => {
     {
       title: "Listing Title",
       key: "name",
+      width: 100,
       render: (data) => {
         return (
           <User mobilM>
@@ -40,11 +41,10 @@ export const MyProfile = () => {
               </del>
             </User>
             <div style={{ marginLeft: "auto" }}>
-              <Button width={71} display={"true"} height={23} type={"dark"}>
+              <Button width={71} display height={43} type={"dark"}>
                 For Sale
               </Button>
             </div>
-            <div></div>
           </User>
         );
       },
@@ -55,17 +55,19 @@ export const MyProfile = () => {
       render: (data) => <span> {data.houseDetails.yearBuilt}</span>,
       key: "houseDetails.yearBuilt",
       width: 150,
+      responsive: ["md"],
     },
     {
       title: "Email",
+      responsive: ["md"],
       render: (data) => <span> {data.user.email}</span>,
       key: "email",
     },
     {
       title: "Price",
       key: "price",
+      responsive: ["md"],
       render: (data) => <span> $ {data.price}</span>,
-
       width: 150,
     },
     {
@@ -110,7 +112,6 @@ export const MyProfile = () => {
         <div style={{ textAlign: "start" }} className="title">
           My Properties
         </div>
-
         <div style={{ marginLeft: "auto" }} className="title">
           <Button onClick={() => navigate("/my-profile/new-house")}>
             Add House
@@ -129,6 +130,9 @@ export const MyProfile = () => {
           }}
           dataSource={data?.data}
           columns={columns}
+          scroll={{
+            x: 200,
+          }}
         />
       </Container>
     </Wrapper>

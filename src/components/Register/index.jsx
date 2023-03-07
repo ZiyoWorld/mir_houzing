@@ -13,7 +13,6 @@ export const Register = () => {
             key: "1",
             children: <Signin />,
           },
-
           {
             label: `Sign up`,
             key: "2",

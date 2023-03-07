@@ -54,12 +54,15 @@ const Container = styled("button")`
   &:active {
     opacity: 0.7;
   }
+  @media (min-width: 0) and (max-width: 768px) {
+    display: ${({ display }) => (display ? "none" : "flex")};
+  }
 
   @media (min-width: 0) and (max-width: 425px) {
     display: ${({ display }) => (display ? "none" : "flex")};
   }
   @media (min-width: 0) and (max-width: 375px) {
-    display: ${({ display }) => (display  ? "none" : "flex")};
+    display: ${({ display }) => (display ? "none" : "flex")};
   }
 `;
 

@@ -23,6 +23,9 @@ const Container = styled.div`
   @media (min-width: 0) and (max-width: 768px) {
     padding: 10px 16px;
   }
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: 10px 16px;
+  }
   @media (min-width: 0) and (max-width: 375px) {
     padding: 10px 16px;
   }
@@ -63,8 +66,14 @@ const Section = styled.div`
   justify-content: start;
   gap: 20px;
   margin-bottom: 20px;
+  @media (min-width: 0) and (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media (min-width: 0) and (max-width: 425px) {
+    flex-direction: column;
+  }
 
-  @media only screen and (max-width: 375px) {
+  @media (min-width: 0) and (max-width: 375px) {
     flex-direction: column;
   }
 `;

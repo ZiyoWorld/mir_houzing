@@ -9,6 +9,13 @@ const Container = styled.div`
   margin: 0 auto;
   width: 100%;
   background: #e6e9ec;
+  padding: var(--tablet);
+  @media (min-width: 0) and (max-width: 425px) {
+    padding: var(--mobilM);
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    padding: var(--mobilM);
+  }
 `;
 
 const AntTabs = styled(Tabs)`
