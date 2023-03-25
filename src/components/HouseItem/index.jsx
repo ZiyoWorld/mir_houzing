@@ -32,7 +32,7 @@ const Filter = () => {
     // request({ url: `/houses/list/${params?.id}` }).then((res) =>
     //   setData(res?.data || {})
     // );
-    fetch(`https://houzing-app.herokuapp.com/api/v1/houses/id/${params?.id}`)
+    fetch(`http://158.51.99.245:8081/api/v1/houses/id/${params?.id}`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data);
@@ -47,14 +47,14 @@ const Filter = () => {
     <React.Fragment>
       <ImageContainer>
         <ImageContainer.Main
-          src={(data?.attachments && data?.attachments[0].imgPath) || noimg}
+          src={(data?.attachments && data?.attachments) || noimg}
           alt="Test"
         />
         <ImgContainer>
           {data?.attachments &&
             data?.attachments?.slice(1, 5).map((value, index) => {
               return data?.attachments?.length > 5 && index === 3 ? (
-                <Blur.Container>
+                <Blur.Container key={value.id}>
                   <ImageContainer.Subimg
                     key={value.id}
                     src={value?.imgPath}

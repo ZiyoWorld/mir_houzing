@@ -19,11 +19,9 @@ export const useRequest = () => {
     };
 
     return fetch(
-      `${
-        me ? "https://houzing-app.herokuapp.com/api" : REACT_APP_BASE_URL
-      }${url}`,
+      `${me ? "http://158.51.99.245:8081/api" : REACT_APP_BASE_URL}${url}`,
       options
-    ).then((res) => res.json())
+    ).then((res) => res.json());
   };
 
   return request;

@@ -24,7 +24,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
     event.stopPropagation();
     console.log("test", id);
     fetch(
-      `https://houzing-app.herokuapp.com/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`,
+      `http://158.51.99.245:8081/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`,
       {
         method: "PUT",
         headers: {
