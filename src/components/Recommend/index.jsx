@@ -74,7 +74,7 @@ export const Recommended = () => {
         })}
       </List>
       <div>
-        <Button onClick={onLoadMore}  marginTop={15}>
+        <Button onClick={onLoadMore} display="true" marginTop={15}>
           loading more
         </Button>
       </div>
