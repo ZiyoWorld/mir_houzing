@@ -47,7 +47,7 @@ const Filter = () => {
     <React.Fragment>
       <ImageContainer>
         <ImageContainer.Main
-          src={(data?.attachments && data?.attachments) || noimg}
+          src={(data?.attachments && data?.attachments[0]?.imgPath) || noimg}
           alt="Test"
         />
         <ImgContainer>

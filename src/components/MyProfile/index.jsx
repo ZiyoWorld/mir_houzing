@@ -41,7 +41,7 @@ export const MyProfile = () => {
               </del>
             </User>
             <div style={{ marginLeft: "auto" }}>
-              <Button width={71} display height={43} type={"dark"}>
+              <Button width={71} display="true" height={43} type={"dark"}>
                 For Sale
               </Button>
             </div>

@@ -216,7 +216,7 @@ export const AddNewHouse = () => {
           <Section flex>
             {imgs.map((value) => {
               return (
-                <Hidden>
+                <Hidden key={value.id}>
                   {value?.imgPath}{" "}
                   <IconDelete
                     onClick={() => {
