@@ -13,7 +13,7 @@ const Properties = () => {
   const { search } = useLocation();
 
   useEffect(() => {
-    request({ url: `/houses/list${search}` }).then((res) =>
+    request({ url: `/v1/houses/list${search}` }).then((res) =>
       setData(res?.data || [])
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -30,7 +30,7 @@ export const Recommended = () => {
 
   // const count = 3;
   useEffect(() => {
-    fetch(`${url}/houses/list`)
+    fetch(`${url}/v1/houses/list`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data || []);

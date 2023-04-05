@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Content } from "./style";
 
-
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom/dist";
-
 
 import HouseCard from "../HouseCard";
 
@@ -71,7 +69,7 @@ export const Recent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`${url}/houses/list`)
+    fetch(`${url}/v1/houses/list`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data || []);
@@ -79,7 +77,6 @@ export const Recent = () => {
   }, []);
   return (
     <Container>
-      
       <Content>
         <h1 className="title">Recent Properties for Rent</h1>
         <div className="info">

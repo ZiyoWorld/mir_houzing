@@ -70,7 +70,7 @@ export const GenCarousel = () => {
   const navigation = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch(`${url}/categories/list`)
+    fetch(`${url}/v1/categories/list`)
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data || []);
