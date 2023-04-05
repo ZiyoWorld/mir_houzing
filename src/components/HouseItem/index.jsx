@@ -32,7 +32,9 @@ const Filter = () => {
     // request({ url: `/houses/list/${params?.id}` }).then((res) =>
     //   setData(res?.data || {})
     // );
-    fetch(`http://158.51.99.245:8081/api/v1/houses/id/${params?.id}`)
+    fetch(
+      `http://ec2-3-140-188-131.us-east-2.compute.amazonaws.com:8081/api/v1/houses/id/${params?.id}`
+    )
       .then((res) => res.json())
       .then((res) => {
         setData(res?.data);

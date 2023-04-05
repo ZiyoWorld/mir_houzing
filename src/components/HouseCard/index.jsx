@@ -24,7 +24,7 @@ export const HouseCard = ({ data = {}, gap, onClick }) => {
     event.stopPropagation();
     console.log("test", id);
     fetch(
-      `http://158.51.99.245:8081/api/v1/houses/addFavourite/${id}?favourite=${!favorite}`,
+      `http://ec2-3-140-188-131.us-east-2.compute.amazonaws.com:8081/api/v1/houses/getAll/favouriteList/${id}?favourite=${!favorite}`,
       {
         method: "PUT",
         headers: {

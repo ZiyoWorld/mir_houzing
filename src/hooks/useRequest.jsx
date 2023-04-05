@@ -19,7 +19,11 @@ export const useRequest = () => {
     };
 
     return fetch(
-      `${me ? "http://158.51.99.245:8081/api" : REACT_APP_BASE_URL}${url}`,
+      `${
+        me
+          ? "http://ec2-3-140-188-131.us-east-2.compute.amazonaws.com:8081/api/v1"
+          : REACT_APP_BASE_URL
+      }${url}`,
       options
     ).then((res) => res.json());
   };
